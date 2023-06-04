@@ -10,9 +10,22 @@ import LineGradient from "./components/LineGradient";
 import Services from "./scenes/Services";
 import Blogs from "./scenes/Blogs";
 import { Input, Space } from "antd";
-import Contact from './scenes/Contact'
+import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
+import { Carousel } from "antd";
+import vishal from "./team/vishal.jpeg";
+import tarun from "./team/tarun.jpeg";
+import aman from "./team/aman.jpeg";
+import ash from "./team/ash.jpeg";
 
+const contentStyle = {
+  height: "560px",
+  color: "#fff",
+  width: "400px",
+  lineHeight: "160px",
+  textAlign: "center",
+  background: "#364d79",
+};
 
 const { Search } = Input;
 
@@ -76,16 +89,19 @@ const App = () => {
           <ParallaxLayer className=" relative ">
             <div className="search flex flex-col items-center">
               <h1 className=" text-8xl pb-[60px] font-bold">AgriKAAR</h1>
-              <h2 className=" text-[#dba912] font-bold text-3xl pb-8">A Plant Disease Detection Pokemon</h2>
-            
-            <Search
-              placeholder="input search text"
-              allowClear
-              enterButton="Search"
-              size="large"
-              className=""
-              style={{backgroundColor:"#dba912"}}
-            /></div>
+              <h2 className=" text-[#dba912] font-bold text-3xl pb-8">
+                A Plant Disease Detection Pokemon
+              </h2>
+
+              <Search
+                placeholder="input search text"
+                allowClear
+                enterButton="Search"
+                size="large"
+                className=""
+                style={{ backgroundColor: "#dba912" }}
+              />
+            </div>
           </ParallaxLayer>
         </Parallax>
       </div>
@@ -118,16 +134,32 @@ const App = () => {
         </motion.div>
       </div>
       <LineGradient />
+      <div className="w-5/6 mx-auto  " id="about">
+        <Carousel autoplay>
+          <div>
+            <img src={vishal} style={contentStyle}></img>
+          </div>
+          <div>
+          <img src={tarun} style={contentStyle}></img>
+          </div>
+          <div>
+          <img src={aman} style={contentStyle}></img>
+          </div>
+          <div>
+          <img src={ash} style={contentStyle}></img>
+          </div>
+        </Carousel>
+      </div>
       <div className="w-5/6 mx-auto md:h-full" id="contact">
-          <motion.div
-            margin="0 0 -200px 0"
-            amount="all"
-            onViewportEnter={() => setSelectedPage("contact")}
-          >
-            <Contact />
-          </motion.div>
-        </div>
-        <Footer></Footer>
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("contact")}
+        >
+          <Contact />
+        </motion.div>
+      </div>
+      <Footer></Footer>
     </div>
   );
 };

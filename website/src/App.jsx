@@ -11,6 +11,8 @@ import Services from "./scenes/Services";
 import Blogs from "./scenes/Blogs";
 import { Input, Space } from "antd";
 import Contact from './scenes/Contact'
+import Footer from "./scenes/Footer";
+
 
 const { Search } = Input;
 
@@ -125,6 +127,7 @@ const App = () => {
             <Contact />
           </motion.div>
         </div>
+        <Footer></Footer>
     </div>
   );
 };

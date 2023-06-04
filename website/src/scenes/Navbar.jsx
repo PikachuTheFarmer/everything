@@ -25,7 +25,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const navbarBackground = isTopOfPage ? "" : "bg-transparent";
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full  top-0  fixed flex flex-row items-center `}>
+    <nav className={`${navbarBackground} z-40 w-full  top-0  fixed flex flex-row items-center justify-center`}>
       <img src={logo} alt="" className="logo"></img>
 
       <div className="flex  items-end justify-between mx-auto ">

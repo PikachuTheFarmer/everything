@@ -10,6 +10,7 @@ import LineGradient from "./components/LineGradient";
 import Services from "./scenes/Services";
 import Blogs from "./scenes/Blogs";
 import { Input, Space } from "antd";
+import Contact from './scenes/Contact'
 
 const { Search } = Input;
 
@@ -115,6 +116,15 @@ const App = () => {
         </motion.div>
       </div>
       <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full" id="contact">
+          <motion.div
+            margin="0 0 -200px 0"
+            amount="all"
+            onViewportEnter={() => setSelectedPage("contact")}
+          >
+            <Contact />
+          </motion.div>
+        </div>
     </div>
   );
 };

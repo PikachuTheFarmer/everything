@@ -8,6 +8,7 @@ import Navbar from "./scenes/Navbar";
 import { motion } from "framer-motion";
 import LineGradient from "./components/LineGradient";
 import Services from "./scenes/Services";
+import Blogs from './scenes/Blogs'
 
 
 
@@ -34,13 +35,12 @@ const App = () => {
   }, []);
   return (
     <div className="app">
-      <div>
+      <div id='home'>
       <Navbar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />
-        <h1 className=" text-6xl">AgriKaar</h1>
       <Parallax pages={3} style={{ top: "0", left: "0" }} className="animation">
         <ParallaxLayer offset={0} speed={0.25}>
           <div className="animation_layer parallax" id="artback"></div>
@@ -90,6 +90,16 @@ const App = () => {
               <Services></Services>
               <a href="http://127.0.0.1:8000/"><button >Upload</button></a>
             </div>
+          </motion.div>
+        </div>
+        <LineGradient />
+        <div className="w-5/6 mx-auto" id="blogs">
+          <motion.div
+            margin="0 0 -200px 0"
+            amount="all"
+            onViewportEnter={() => setSelectedPage("blogs")}
+          >
+            <Blogs />
           </motion.div>
         </div>
         <LineGradient />

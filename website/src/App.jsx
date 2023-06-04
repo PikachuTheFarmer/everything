@@ -1,6 +1,6 @@
 import  { useEffect } from "react";
 import "./parallex2.scss";
-import "./App.css";
+import "./App.scss";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import  Card  from "./components/Card";
 import TextBlock from './components/TextBlock'

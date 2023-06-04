@@ -1,4 +1,4 @@
-import '../parallex2.scss';
+import '../App.scss';
 
 function TextBlock() {
     return (

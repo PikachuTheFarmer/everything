@@ -1,16 +1,39 @@
-import  { useEffect } from "react";
 import "./App.scss";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import  Card  from "./components/Card";
 import TextBlock from './components/TextBlock'
+import { useEffect, useState } from "react";
+import useMediaQuery from "./hooks/useMediaQuery";
+import Navbar from "./scenes/Navbar";
+
+
+
 
 
 const App = () => {
-  useEffect(() => {}, []);
+  const [selectedPage, setSelectedPage] = useState("home");
+  const [isTopOfPage, setIsTopOfPage] = useState(true);
+  const isDesktop = useMediaQuery("(min-width: 1060px)");
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+        setSelectedPage("home");
+      }
+      if (window.scrollY !== 0) setIsTopOfPage(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div className="app">
       <div>
+      <Navbar
+          isTopOfPage={isTopOfPage}
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
         <h1 className=" text-6xl">AgriKaar</h1>
       <Parallax pages={3} style={{ top: "0", left: "0" }} className="animation">
         <ParallaxLayer offset={0} speed={0.25}>

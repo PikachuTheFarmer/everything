@@ -17,6 +17,7 @@ const App = () => {
         <ParallaxLayer offset={0} speed={0.25}>
           <div className="animation_layer parallax" id="artback"></div>
         </ParallaxLayer>
+        
         <ParallaxLayer offset={0} speed={0.3}>
           <div className="animation_layer parallax" id="mountain"></div>
         </ParallaxLayer>

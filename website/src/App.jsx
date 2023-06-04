@@ -5,6 +5,12 @@ import TextBlock from './components/TextBlock'
 import { useEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./scenes/Navbar";
+import { motion } from "framer-motion";
+import LineGradient from "./components/LineGradient";
+import Services from "./scenes/Services";
+
+
+
 
 
 
@@ -73,12 +79,23 @@ const App = () => {
       <div>
         <TextBlock></TextBlock>
       </div>
-      <div className="card-container"> 
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
+      <LineGradient />
+      <div className="" id="services">
+          <motion.div
+            margin="0 0 -200px 0"
+            amount="all"
+            onViewportEnter={() => setSelectedPage("services")}
+          >
+            <div>
+              <Services></Services>
+              <a href="http://127.0.0.1:8000/"><button >Upload</button></a>
+            </div>
+          </motion.div>
+        </div>
+        <LineGradient />
+      
 
-      </div>
+      
     </div>
   );
 };

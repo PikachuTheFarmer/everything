@@ -1,5 +1,4 @@
 import  { useEffect } from "react";
-import "./parallex2.scss";
 import "./App.scss";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import  Card  from "./components/Card";
@@ -12,7 +11,7 @@ const App = () => {
   return (
     <div className="app">
       <div>
-        <h1>AgriKaar</h1>
+        <h1 className=" text-6xl">AgriKaar</h1>
       <Parallax pages={3} style={{ top: "0", left: "0" }} className="animation">
         <ParallaxLayer offset={0} speed={0.25}>
           <div className="animation_layer parallax" id="artback"></div>

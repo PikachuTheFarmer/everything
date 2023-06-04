@@ -7,6 +7,7 @@ import project4 from '../assets/project-4.jpeg'
 import project5 from '../assets/project-5.jpeg'
 import project6 from '../assets/project-6.jpeg'
 import project7 from '../assets/project-7.jpeg'
+import '../App.scss'
 
 const container = {
   hidden: {},
@@ -35,7 +36,7 @@ const Project = ({ title ,src,data}) => {
          {data}
         </p>
       </div>
-      <img  src={src} className="rounded-3xl" alt={projectTitle} />
+      <img  src={src} className="rounded-3xl blog" alt={projectTitle} />
     </motion.div>
   );
 };
@@ -90,17 +91,17 @@ const Blogs = () => {
           >
             Helping the 
           </div>
-          <Project title="Project 1" src={project1} data={data1}/>
-          <Project title="Project 2" src={project2}  data={data2}/>
+          <Project title="Project 1" src={project1}  className="blog" data={data1}/>
+          <Project title="Project 2" src={project2}  className="blog" data={data2}/>
 
           {/* ROW 2 */}
-          <Project title="Project 3" src={project3} data={data3}/>
-          <Project title="Project 4" src={project4} data={data4}/>
-          <Project title="Project 5" src={project5} data={data5} />
+          <Project title="Project 3" src={project3} className="blog" data={data3}/>
+          <Project title="Project 4" src={project4} className="blog" data={data4}/>
+          <Project title="Project 5" src={project5} className="blog" data={data5} />
 
           {/* ROW 3 */}
-          <Project title="Project 6" src={project6} data={data6}/>
-          <Project title="Project 7" src={project7} data={data7}/>
+          <Project title="Project 6" src={project6} className="blog" data={data6}/>
+          <Project title="Project 7" src={project7} className="blog" data={data7}/>
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"

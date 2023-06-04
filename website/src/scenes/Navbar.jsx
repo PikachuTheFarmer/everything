@@ -1,6 +1,8 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
+import logo from "../assets/logo.png";
+import "../App.scss";
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -8,7 +10,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
     <AnchorLink
       className={`${
         selectedPage === lowerCasePage ? " text-black" : ""
-      } hover:text-black transition duration-500`}
+      } hover:text-black transition duration-500 text-2xl`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -23,12 +25,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const navbarBackground = isTopOfPage ? "" : "bg-transparent";
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full  top-0 py-6 fixed`}>
-      <div className="flex items-center justify-between mx-auto w-5/6">
+    <nav className={`${navbarBackground} z-40 w-full  top-0  fixed flex flex-row items-center `}>
+      <img src={logo} alt="" className="logo"></img>
 
+      <div className="flex  items-end justify-between mx-auto ">
         {/* DESKTOP NAV */}
         {isDesktop ? (
-          <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
+          <div className="flex justify-between gap-10 font-opensans text-sm font-semibold">
             <Link
               page="Home"
               selectedPage={selectedPage}

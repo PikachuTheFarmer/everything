@@ -13,17 +13,17 @@ export default function Card() {
     <div className="card" >
 		<div className={isActive ? 'card__inner' : 'card__inner is-flipped'} onClick={handleClick} >
 			<div className="card__face card__face--front">
-				<h2>Our Rover</h2>
+				<h2>AgriKAAR</h2>
 			</div>
 			<div className="card__face card__face--back">
 				<div className="card__content">
 					<div className="card__header">
 						<img src="" alt="pp" className="pp" />
-						<h2>Rover</h2>
+						<h2>AgriKAAR</h2>
 					</div>
 					<div className="card__body">
 						<h3>Rover</h3>
-						<p>This is our rover  this is rover, <strong>rover</strong> .</p>
+						<p>Solar-powered  <strong>unmanned multipurpose vehicles </strong>(UAVs).</p>
 					</div>
 				</div>
 			</div>

@@ -19,8 +19,8 @@ const Services = () => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
-        >
-           <Upload></Upload>
+        ><a href="http://127.0.0.1:8000/">
+           <Upload></Upload></a>
         </motion.div>
 
         <div className="mt-16 md:mt-0">
@@ -32,7 +32,7 @@ const Services = () => {
            
             </div>
           ) : (
-            <Upload></Upload>
+            <></>
           )}
         </div>
       </div>
